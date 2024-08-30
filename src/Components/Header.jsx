@@ -2,7 +2,10 @@ import React from 'react'
 
 function Header() {
   return (
-    <div>Header</div>
+    <div>
+        <div>Header</div>
+        <div>opem/close</div>
+    </div>
   )
 }
 

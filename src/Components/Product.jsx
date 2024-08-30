@@ -1,8 +1,31 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-function Product() {
+function Product({product}) {
+    const {id,image,category,title,price} = product
   return (
-    <div>Product</div>
+    <div className='productDiv'>
+        <div className='divs'>
+            <div className='img'>
+                <div className='imgDiv'>
+                    <img src={image} alt="" />
+                </div>
+            </div>
+            <div className='buttonDiv'>
+                <button><ion-icon name="duplicate-outline"></ion-icon></button>
+                <Link to={`/product/${id}`} className='icon'>
+                    <ion-icon name="search-outline"></ion-icon>
+                </Link>
+            </div>
+        </div>
+        <div className='div'>
+            <div>Category:  {category}</div>
+            <Link to={`/product/${id}`}>
+                <h4>{title}</h4>
+            </Link>
+            <h4>{price}$</h4>
+        </div>
+    </div>
   )
 }
 
