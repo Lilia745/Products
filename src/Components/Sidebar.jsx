@@ -1,10 +1,28 @@
-import React, { useContext } from 'react'
-import { SidebarContext } from '../Contexts/SidebarContext'
+import { useContext } from "react"
+import { SidebarContext } from "../Contexts/SidebarContext"
+import { Link } from "react-router-dom"
+import { CardContext } from "../Contexts/CardContext"
+import CradItem from "./CradItem"
 
 function Sidebar() {
-    const {isOpen,handleClose} = useContext(SidebarContext)
+    const {card} = useContext(CardContext)
   return (
-    <div className='sideBar'>Sidebar</div>
+    <div className='sideBar'>
+        <div className="shop">
+            <div>
+                <div>Shoping Bag (0)</div>
+            </div>
+        </div>
+        <div>
+            <div className="roots">
+                {
+                    card.map((item=>{
+                        return <CradItem item={item} key={item.id}/>
+                    }))
+                }
+            </div>
+        </div>
+    </div>
   )
 }
 

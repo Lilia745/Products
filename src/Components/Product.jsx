@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import { CardContext } from '../Contexts/CardContext'
 
 function Product({product}) {
+    const {addToCard}=useContext(CardContext);
     const {id,image,category,title,price} = product
   return (
     <div className='productDiv'>
@@ -12,7 +14,7 @@ function Product({product}) {
                 </div>
             </div>
             <div className='buttonDiv'>
-                <button><ion-icon name="duplicate-outline"></ion-icon></button>
+                <button onClick={()=> addToCard(product,id)}><div><ion-icon name="duplicate-outline"></ion-icon></div></button>
                 <Link to={`/product/${id}`} className='icon'>
                     <ion-icon name="search-outline"></ion-icon>
                 </Link>

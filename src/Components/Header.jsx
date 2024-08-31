@@ -1,11 +1,12 @@
-import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Header() {
   return (
-    <div>
-        <div>Header</div>
-        <div>opem/close</div>
-    </div>
+    <header>
+        <Link to='/Sidebar'>
+            <div className='ionIcon'><ion-icon name="bag-outline"></ion-icon></div>
+        </Link>
+    </header>
   )
 }
 

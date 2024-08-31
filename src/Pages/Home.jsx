@@ -6,7 +6,6 @@ function Home() {
     const fiteredProducts = products.filter((item) =>{
         return item.category === "men's clothing" || item.category === "women's clothing"
     })
-    console.log(fiteredProducts);
   return (
     <div>
         <section className='section'>
