@@ -39,7 +39,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px;
+  flex-direction: column;
+  padding: 20px;
 }
 .imgDiv img {
   width: 170px;
@@ -91,26 +92,17 @@
   width: 100%;
 }
 .div{
-  width: 250px;
+  width: 200px;
 }
 .productDiv{
   height: 450px;
 }
 .sideBar{
   width:100%;
-  background-color: white;
   height: 100vh;
-  position: fixed;
-  transition: 0.5s;
-  top: 0;
-  right: 0;
+  background-color: white;
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  -webkit-box-shadow: 0px 0px 31px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 0px 31px 0px rgba(0,0,0,0.75);
-  box-shadow: 0px 0px 31px 0px rgba(0,0,0,0.75);
 }
 .shop{
   width: 50%;
@@ -149,11 +141,33 @@ footer{
   padding: 20px;
 }
 .shops{
+  width: 300px;
   border: 1px solid;
-  height: 300px;
+  height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  padding: 25px;
+}
+.delet{
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 20px;
+  background-color: rgb(154, 25, 25);
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  transition: 0.5s;
+  &:hover{
+    background-color: rgba(165, 42, 42, 0.766);
+  }
 }
 .imgDiv img{
   width: 150px;
@@ -169,4 +183,37 @@ footer{
   gap: 30px;
   flex-wrap: wrap;
   margin-top: 200px;
+}
+.priceDiv{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.title{
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+.plus-minus{
+  width: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.027);
+}
+.minus{
+  cursor: pointer;
+}
+.plus{
+  cursor: pointer;
+}
+.finalPrice{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 10px;
 }

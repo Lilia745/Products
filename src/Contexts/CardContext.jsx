@@ -22,8 +22,15 @@ function CardProvider({children}) {
             setCard([...card, newItem])
         }
     }
+
+    const removeCard = (id)=>{
+        const newCard = card.filter(item =>{
+            return item.id !== id
+        })
+        setCard(newCard)
+    }
   return (
-    <CardContext.Provider value={{card,addToCard}}>
+    <CardContext.Provider value={{card,addToCard,removeCard}}>
         {children}
     </CardContext.Provider>
   )
