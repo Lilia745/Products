@@ -15,9 +15,6 @@ function Product({product}) {
             </div>
             <div className='buttonDiv'>
                 <button onClick={()=> addToCard(product,id)}><div><ion-icon name="duplicate-outline"></ion-icon></div></button>
-                <Link to={`/product/${id}`} className='icon'>
-                    <ion-icon name="search-outline"></ion-icon>
-                </Link>
             </div>
         </div>
         <div className='div'>

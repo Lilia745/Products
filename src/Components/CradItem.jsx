@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { CardContext } from '../Contexts/CardContext'
 
 function CradItem({item}) { 
-    const {removeCard} = useContext(CardContext)
+    const {removeCard,increment,decrement} = useContext(CardContext)
     const {id,title,image,price,amout} = item
   return (
     <div className='shops'>
@@ -22,12 +22,12 @@ function CradItem({item}) {
                 </div>
                 <div className='priceDiv'>
                     <div className='plus-minus'>
-                        <div className='minus'>-</div>
-                        <div className='num'>{amout}</div>
-                        <div className='plus'>+</div>
+                        <div className='minus' onClick={()=>decrement(id)}>-</div>
+                        <div className='nums'>{amout}</div>
+                        <div className='plus' onClick={()=>increment(id)}>+</div>
                     </div>
-                    <div>${price}</div>
-                    <div className='finalPrice'>Total:   {`$ ${price * amout}`}</div>
+                    <div className='Price'>${price}</div>
+                    <div className='finalPrice'>{`$ ${price * amout}`}</div>
                 </div>
             </div>
         </div>

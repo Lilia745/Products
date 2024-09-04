@@ -99,7 +99,6 @@
 }
 .sideBar{
   width:100%;
-  height: 100vh;
   background-color: white;
   display: flex;
   justify-content: center;
@@ -111,25 +110,45 @@
   padding: 20px;
   display: flex;
   justify-content: space-around;
+  background-color: white;
   position: absolute;
   top: 0;
   -webkit-box-shadow: 0px 0px 31px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 0px 31px 0px rgba(0,0,0,0.75);
   box-shadow: 0px 0px 31px 0px rgba(0,0,0,0.75);
   background-color: rgba(128, 128, 128, 0.274);
-  margin-bottom: 30px;
 }
 header{
   width: 100%;
-  padding: 20px;
+  padding: 15px;
   -webkit-box-shadow: 0px 0px 31px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 0px 31px 0px rgba(0,0,0,0.75);
   box-shadow: 0px 0px 31px 0px rgba(0,0,0,0.75);
   margin-bottom: 30px;
   background-color: rgba(128, 128, 128, 0.274);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ionIcon {
+  width: 30px;
+  position: relative;
+}
+.num{
+  width: 25px;
+  height: 25px;
+  border-radius:50% ;
+  position: absolute;
+  bottom: 15px;
+  left: 17px;
+  background-color: rgb(154, 25, 25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
 .ionIcon ion-icon {
-  font-size: 20px;
+  font-size: 30px;
 }
 footer{
   display: flex;
@@ -139,6 +158,7 @@ footer{
   box-shadow: 0px 0px 31px 0px rgba(0,0,0,0.75);
   background-color: rgba(128, 128, 128, 0.274);
   padding: 20px;
+  margin-top: 30px;
 }
 .shops{
   width: 300px;
@@ -149,6 +169,7 @@ footer{
   align-items: center;
   position: relative;
   padding: 25px;
+  margin-bottom: 50px;
 }
 .delet{
   width: 30px;
@@ -182,7 +203,8 @@ footer{
   padding: 20px;
   gap: 30px;
   flex-wrap: wrap;
-  margin-top: 200px;
+  margin-top: 20px;
+  position: relative;
 }
 .priceDiv{
   width: 100%;
@@ -193,6 +215,9 @@ footer{
 .title{
   margin-top: 15px;
   margin-bottom: 10px;
+}
+.Price{
+  color: gray;
 }
 .plus-minus{
   width: 100px;
@@ -216,4 +241,32 @@ footer{
   bottom: 0;
   right: 0;
   margin: 10px;
+}
+.total-clear{
+  width: 300px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-left: 20px;
+}
+.clear{
+  width: 30px;
+  height: 30px;
+  background-color:rgb(154, 25, 25) ;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+  &:hover{
+    background-color: rgba(165, 42, 42, 0.702);
+  }
+}
+header img {
+  width: 60px;
+  height: 60px;
+  border-radius: 20px;
+  cursor: pointer;
+  object-fit: cover;
 }

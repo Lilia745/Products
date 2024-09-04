@@ -1,18 +1,11 @@
 import { useContext } from "react"
-import { SidebarContext } from "../Contexts/SidebarContext"
-import { Link } from "react-router-dom"
 import { CardContext } from "../Contexts/CardContext"
 import CradItem from "./CradItem"
 
 function Sidebar() {
-    const {card} = useContext(CardContext)
+    const {card,clearCard,total} = useContext(CardContext)
   return (
     <div className='sideBar'>
-        <div className="shop">
-            <div>
-                <div>Shoping Bag (0)</div>
-            </div>
-        </div>
         <div>
             <div className="roots">
                 {
@@ -20,11 +13,13 @@ function Sidebar() {
                         return <CradItem item={item} key={item.id}/>
                     }))
                 }
+                <div className="total-clear">
+                    <div className="total">Total:   {parseFloat (total).toFixed(2)} $</div>
+                    <div className="clear" onClick={clearCard}><ion-icon name="trash-outline"></ion-icon></div>
+                </div>
             </div>
-            <div>A</div>
         </div>
     </div>
   )
 }
-
 export default Sidebar
